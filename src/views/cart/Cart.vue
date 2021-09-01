@@ -5,6 +5,7 @@
   export default {
     name: "Cart",
     components: {},
+	
 
   }
 </script>
