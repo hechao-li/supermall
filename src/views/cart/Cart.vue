@@ -6,7 +6,6 @@
     name: "Cart",
     components: {},
 	
-
   }
 </script>
 <style>
