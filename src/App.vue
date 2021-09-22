@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <router-view />
-    <main-tab-bar />
+    <main-tab-bar ref="Lin"></main-tab-bar>
+   
   </div>
 
 </template>
@@ -12,14 +13,16 @@
     components: {
       MainTabBar
     },
-    methods:{
-      methodsName(){
-        this.$refs.List.checklist(2)
+    methods: {
+      check() {
+        console.log(this.$refs.Lin)
       }
     }
   }
+
 </script>
 
 <style lang="scss">
   @import "assets/css/base.css";
+
 </style>

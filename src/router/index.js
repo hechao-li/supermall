@@ -4,12 +4,10 @@ const Home = () => import('../views/home/Home')
 const Category = () => import('../views/category/Category')
 const Cart = () => import('../views/cart/Cart')
 const Profile = () => import('../views/profile/Profile')
-const News  = ()=>import('../views/home/News')
-const Message = () => import('../views/home/Message')
 
 const routes = [{
   path: '/',
-  redirect: '/home'
+  redirect: '/Home'
 },
   {
     path: '/home',
@@ -17,25 +15,6 @@ const routes = [{
       title: '首页'
     },
     component: () => import('../views/home/Home'),
-    children: [{
-      path: '',
-      redirect: '/home/News'
-    },
-      {
-        path: "/home/news",
-        meta: {
-          title: '新闻'
-        },
-        component: () => import('../views/home/News') //懒加载方式
-      },
-      {
-        path: '/home/Message',
-        meta: {
-          title: '消息'
-        },
-        component: () => import('../views/home/Message')
-      }
-    ]
   },
   {
     path: '/category',
